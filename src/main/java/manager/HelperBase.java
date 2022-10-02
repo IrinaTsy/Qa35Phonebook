@@ -29,6 +29,19 @@ public class HelperBase {
         el.sendKeys(text);
         }
     }
+
+    public void logOut() {
+
+        // WebElement element = wd.findElement(By.xpath("//button[text()='Sign Out']"));
+//       //element.click();
+        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
+    }
+
+    public void openLogRegForm() {
+
+        WebElement loginTab = wd.findElement(By.xpath("//a[@href='/login']"));
+        loginTab.click();
+    }
 }
 
 

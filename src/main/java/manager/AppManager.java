@@ -7,6 +7,7 @@ public class AppManager {
 
     WebDriver wd;
     HelperUser helperUser;
+    HelperContacts helperContacts;
 
     public void init(){
 
@@ -16,6 +17,7 @@ public class AppManager {
         wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/");
 
         helperUser = new HelperUser(wd);
+        helperContacts = new HelperContacts(wd);
     }
 
     public void stop(){
@@ -24,7 +26,6 @@ public class AppManager {
 
 
 
-    public HelperUser getHelperUser() {
-        return helperUser;
-    }
+    public HelperUser getHelperUser() { return helperUser;}
+    public HelperContacts helperContacts(){ return helperContacts;}
 }

@@ -28,7 +28,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongEmailFormat() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "gmail.com").withPassword("Vv456789$");
+        User user = new User().withEmail("vrs"+i+"gmail.com").withPassword("Vv456789$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -65,7 +65,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongEmailFormatWithoutDot() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmailcom").withPassword("Vv456789$");
+        User user = new User().withEmail("vrs"+i+"@gmailcom").withPassword("Vv456789$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -78,7 +78,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongEmailFormatWithoutCom() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmail.").withPassword("Vv456789$");
+        User user = new User().withEmail("vrs"+i+"@gmail.").withPassword("Vv456789$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -92,7 +92,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongPassFormat() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmail.com").withPassword("Vv456789");
+        User user = new User().withEmail("vrs"+i+"@gmail.com").withPassword("Vv456789");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -105,7 +105,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongPassFormatWithoutUpperCase() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmail.com").withPassword("vv456789$");
+        User user = new User().withEmail("vrs"+i+"@gmail.com").withPassword("vv456789$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -118,7 +118,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongPassFormatWithoutNumbers() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmail.com").withPassword("Vv$");
+        User user = new User().withEmail("vrs"+i+"@gmail.com").withPassword("Vv$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();
@@ -131,7 +131,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void RegUnsuccessWrongPassFormatWithoutLetters() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User().withEmail("vrs" + i + "@gmail.com").withPassword("456789$");
+        User user = new User().withEmail("vrs"+i+"@gmail.com").withPassword("456789$");
         app.getHelperUser().openLogRegForm();
         app.getHelperUser().fillLogRegForm(user);
         app.getHelperUser().submitReg();

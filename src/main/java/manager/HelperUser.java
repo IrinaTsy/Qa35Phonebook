@@ -24,19 +24,10 @@ public class HelperUser extends HelperBase {
         return list.size() > 0;
     }
 
-    public void logOut() {
 
-        // WebElement element = wd.findElement(By.xpath("//button[text()='Sign Out']"));
-//       //element.click();
-        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
-    }
 
     // open login form
-    public void openLogRegForm() {
 
-        WebElement loginTab = wd.findElement(By.xpath("//a[@href='/login']"));
-        loginTab.click();
-    }
 
     //fill email noa@gmail.com Nnoa12345$
     public void fillLogRegForm(String email, String password) {
